@@ -68,7 +68,7 @@ function Create() {
       </Backdrop>
 
       <Grid container spacing={2}>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <TextField
             fullWidth
             id="outlined-basic"
@@ -78,7 +78,7 @@ function Create() {
             onChange={({ target }) => onChange('name', target.value)}
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <TextField
             fullWidth
             id="outlined-basic"

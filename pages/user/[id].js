@@ -50,7 +50,7 @@ function Detail() {
     setFetching(true)
     dispatchGetDetailUser(id)
   }
-  
+
   const handleSuccessFetchDetailUser = (payload) => {
     setFetching(false)
     setData(payload?.data)
@@ -66,7 +66,7 @@ function Detail() {
       </Backdrop>
     )
   }
-   
+
   return (
     <Layout title={`Detail User ${id}`}>
       <Meta
@@ -81,16 +81,19 @@ function Detail() {
       </Backdrop>
 
       <Grid container spacing={2}>
-        <Grid item xs={6}>
+        <Grid container item xs={12} justifyContent="center" alignItems="center">
+          <img src={data?.avatar} style={{ height: 128, width: 128 }} />
+        </Grid>
+        <Grid item xs={12}>
           <Typography variant="body1" mb={1}>First Name</Typography>
           <TextField
             fullWidth
             label=""
             value={data?.first_name}
             disabled
-            />
+          />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <Typography variant="body1" mb={1}>Last Name</Typography>
           <TextField
             fullWidth
@@ -99,7 +102,7 @@ function Detail() {
             disabled
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <Typography variant="body1" mb={1}>Email</Typography>
           <TextField
             fullWidth

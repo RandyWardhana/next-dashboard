@@ -124,7 +124,7 @@ function Update() {
       </Backdrop>
 
       <Grid container spacing={2}>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <Typography variant="body1" mb={1}>Name</Typography>
           <TextField
             fullWidth
@@ -133,7 +133,7 @@ function Update() {
             onChangeCapture={({ target }) => onChange('name', target.value)}
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <Typography variant="body1" mb={1}>Job</Typography>
           <TextField
             fullWidth

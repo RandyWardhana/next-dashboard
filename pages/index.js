@@ -113,6 +113,15 @@ function ListUser() {
 
   const columns = [
     { field: 'id', headerName: 'ID' },
+    {
+      field: 'avatar',
+      headerName: 'Avatar',
+      sortable: false,
+      width: 72,
+      renderCell: (params) => (
+        <img src={params.getValue(params.id, 'avatar')} />
+      )
+    },
     { field: 'email', headerName: 'Email', width: 240 },
     { field: 'first_name', headerName: 'First name', width: 200 },
     { field: 'last_name', headerName: 'Last name', width: 200 },
